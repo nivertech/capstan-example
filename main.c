@@ -13,7 +13,7 @@
 
 int main(void) {
 
-/*    // Create the two input vectors
+    // Create the two input vectors
     int i;
     const int LIST_SIZE = 1024;
     int *A = (int*)malloc(sizeof(int)*LIST_SIZE);
@@ -22,13 +22,13 @@ int main(void) {
         A[i] = i;
         B[i] = LIST_SIZE - i;
     }
-*/
+
     // Load the kernel source code into the array source_str
     FILE *fp;
     char *source_str;
     size_t source_size;
 
-    fp = fopen("vector_add_kernel.cl", "r");
+    fp = fopen("/tools/vector_add_kernel.cl", "r");
     if (!fp) {
         fprintf(stderr, "Failed to load kernel.\n");
         exit(1);
@@ -108,10 +108,12 @@ int main(void) {
     ret = clReleaseMemObject(c_mem_obj);
     ret = clReleaseCommandQueue(command_queue);
     ret = clReleaseContext(context);
+
+    free(C);
+*/
     free(A);
     free(B);
-    free(C);
-*/    
+    
     return 0;
 }
 
