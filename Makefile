@@ -3,7 +3,8 @@
 # This work is open source software, licensed under the terms of the
 # BSD license as described in the LICENSE file in the top-level directory.
 
-CXXFLAGS  = -g -Wall -std=c++11 -fPIC $(INCLUDES)
+# -std=c++11 is not required
+CXXFLAGS  = -g -Wall -fPIC $(INCLUDES)
 
 TARGET = hello
 
