@@ -3,19 +3,25 @@
 # This work is open source software, licensed under the terms of the
 # BSD license as described in the LICENSE file in the top-level directory.
 
+OPENCL_INC = /opt/AMDAPP/include
+# TODO - hardcoded x86_64
+OPENCL_LIB = /opt/AMDAPP/lib/x86_64
+
+CXX = gcc
+
 # -std=c++11 is not required
-CXXFLAGS  = -g -Wall -fPIC $(INCLUDES)
+CXXFLAGS = -g -Wall -fPIC $(INCLUDES) -l OpenCL -I $(OPENCL_INC) -L $(OPENCL_LIB)
 
-TARGET = hello
+TARGET = main
 
-OBJ_FILES = hello.o
+OBJ_FILES = main.o
 
 quiet = $(if $V, $1, @echo " $2"; $1)
 very-quiet = $(if $V, $1, @$1)
 
 all: $(TARGET).so
 
-%.o: %.cc
+%.o: %.c
 	$(call quiet, $(CXX) $(CXXFLAGS) -c -o $@ $<, CXX $@)
 
 $(TARGET).so: $(OBJ_FILES)
