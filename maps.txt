@@ -1,0 +1,236 @@
+
+$ ps -ax | grep main
+Warning: bad ps syntax, perhaps a bogus '-'? See http://procps.sf.net/faq.html
+22188 pts/1    Sl+    0:00 ./main
+22319 pts/9    S+     0:00 grep --color=auto main
+ 
+$ cat /proc/22188/maps
+
+00400000-00402000 r-xp 00000000 08:07 2930728                            /home/folder/main
+00601000-00602000 r--p 00001000 08:07 2930728                            /home/folder/main
+00602000-00603000 rw-p 00002000 08:07 2930728                            /home/folder/main
+00fad000-01551000 rw-p 00000000 00:00 0                                  [heap]
+7fb1b8000000-7fb1b8021000 rw-p 00000000 00:00 0 
+7fb1b8021000-7fb1bc000000 ---p 00000000 00:00 0 
+7fb1bc000000-7fb1bc021000 rw-p 00000000 00:00 0 
+7fb1bc021000-7fb1c0000000 ---p 00000000 00:00 0 
+7fb1c0000000-7fb1c0021000 rw-p 00000000 00:00 0 
+7fb1c0021000-7fb1c4000000 ---p 00000000 00:00 0 
+7fb1c4000000-7fb1c4021000 rw-p 00000000 00:00 0 
+7fb1c4021000-7fb1c8000000 ---p 00000000 00:00 0 
+7fb1ca7c7000-7fb1ca7c8000 ---p 00000000 00:00 0 
+7fb1ca7c8000-7fb1cafda000 rw-p 00000000 00:00 0                          [stack:22193]
+7fb1cafda000-7fb1cafdb000 ---p 00000000 00:00 0 
+7fb1cafdb000-7fb1cb7ed000 rw-p 00000000 00:00 0                          [stack:22192]
+7fb1cb7ed000-7fb1cb7ee000 ---p 00000000 00:00 0 
+7fb1cb7ee000-7fb1cc000000 rw-p 00000000 00:00 0                          [stack:22191]
+7fb1cc000000-7fb1cc022000 rw-p 00000000 00:00 0 
+7fb1cc022000-7fb1d0000000 ---p 00000000 00:00 0 
+7fb1d01bb000-7fb1d01bc000 r-xp 00000000 08:07 4457732                    /tmp/OCLyqEL1z.so
+7fb1d01bc000-7fb1d03bb000 ---p 00001000 08:07 4457732                    /tmp/OCLyqEL1z.so
+7fb1d03bb000-7fb1d03bc000 rw-p 00000000 08:07 4457732                    /tmp/OCLyqEL1z.so
+7fb1d03bc000-7fb1d03bd000 ---p 00000000 00:00 0 
+7fb1d03bd000-7fb1d0bcf000 rw-p 00000000 00:00 0                          [stack:22190]
+7fb1d0bcf000-7fb1d0bdf000 r-xp 00000000 08:07 1322433                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7fb1d0bdf000-7fb1d0dde000 ---p 00010000 08:07 1322433                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7fb1d0dde000-7fb1d0ddf000 r--p 0000f000 08:07 1322433                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7fb1d0ddf000-7fb1d0de0000 rw-p 00010000 08:07 1322433                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7fb1d0de0000-7fb1d0de5000 r-xp 00000000 08:07 1322431                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7fb1d0de5000-7fb1d0fe4000 ---p 00005000 08:07 1322431                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7fb1d0fe4000-7fb1d0fe5000 r--p 00004000 08:07 1322431                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7fb1d0fe5000-7fb1d0fe6000 rw-p 00005000 08:07 1322431                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7fb1d0fe6000-7fb1d0fe8000 r-xp 00000000 08:07 1322420                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7fb1d0fe8000-7fb1d11e7000 ---p 00002000 08:07 1322420                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7fb1d11e7000-7fb1d11e8000 r--p 00001000 08:07 1322420                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7fb1d11e8000-7fb1d11e9000 rw-p 00002000 08:07 1322420                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7fb1d11e9000-7fb1d1206000 r-xp 00000000 08:07 1323027                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7fb1d1206000-7fb1d1405000 ---p 0001d000 08:07 1323027                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7fb1d1405000-7fb1d1406000 r--p 0001c000 08:07 1323027                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7fb1d1406000-7fb1d1407000 rw-p 0001d000 08:07 1323027                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7fb1d1407000-7fb1d1537000 r-xp 00000000 08:07 1312373                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7fb1d1537000-7fb1d1737000 ---p 00130000 08:07 1312373                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7fb1d1737000-7fb1d1738000 r--p 00130000 08:07 1312373                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7fb1d1738000-7fb1d173c000 rw-p 00131000 08:07 1312373                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7fb1d173c000-7fb1d1751000 r-xp 00000000 08:07 8942                       /lib/x86_64-linux-gnu/libgcc_s.so.1
+7fb1d1751000-7fb1d1950000 ---p 00015000 08:07 8942                       /lib/x86_64-linux-gnu/libgcc_s.so.1
+7fb1d1950000-7fb1d1951000 r--p 00014000 08:07 8942                       /lib/x86_64-linux-gnu/libgcc_s.so.1
+7fb1d1951000-7fb1d1952000 rw-p 00015000 08:07 8942                       /lib/x86_64-linux-gnu/libgcc_s.so.1
+7fb1d1952000-7fb1d1a4d000 r-xp 00000000 08:07 1873                       /lib/x86_64-linux-gnu/libm-2.15.so
+7fb1d1a4d000-7fb1d1c4c000 ---p 000fb000 08:07 1873                       /lib/x86_64-linux-gnu/libm-2.15.so
+7fb1d1c4c000-7fb1d1c4d000 r--p 000fa000 08:07 1873                       /lib/x86_64-linux-gnu/libm-2.15.so
+7fb1d1c4d000-7fb1d1c4e000 rw-p 000fb000 08:07 1873                       /lib/x86_64-linux-gnu/libm-2.15.so
+7fb1d1c4e000-7fb1d1c55000 r-xp 00000000 08:07 1788                       /lib/x86_64-linux-gnu/librt-2.15.so
+7fb1d1c55000-7fb1d1e54000 ---p 00007000 08:07 1788                       /lib/x86_64-linux-gnu/librt-2.15.so
+7fb1d1e54000-7fb1d1e55000 r--p 00006000 08:07 1788                       /lib/x86_64-linux-gnu/librt-2.15.so
+7fb1d1e55000-7fb1d1e56000 rw-p 00007000 08:07 1788                       /lib/x86_64-linux-gnu/librt-2.15.so
+7fb1d1e56000-7fb1d3f7c000 r-xp 00000000 08:07 3027647                    /opt/AMDAPP/lib/x86_64/libamdocl64.so
+7fb1d3f7c000-7fb1d417b000 ---p 02126000 08:07 3027647                    /opt/AMDAPP/lib/x86_64/libamdocl64.so
+7fb1d417b000-7fb1d43e7000 rw-p 02125000 08:07 3027647                    /opt/AMDAPP/lib/x86_64/libamdocl64.so
+7fb1d43e7000-7fb1d44fc000 rw-p 00000000 00:00 0 
+7fb1d44fc000-7fb1d44fe000 r-xp 00000000 08:07 1975                       /lib/x86_64-linux-gnu/libdl-2.15.so
+7fb1d44fe000-7fb1d46fe000 ---p 00002000 08:07 1975                       /lib/x86_64-linux-gnu/libdl-2.15.so
+7fb1d46fe000-7fb1d46ff000 r--p 00002000 08:07 1975                       /lib/x86_64-linux-gnu/libdl-2.15.so
+7fb1d46ff000-7fb1d4700000 rw-p 00003000 08:07 1975                       /lib/x86_64-linux-gnu/libdl-2.15.so
+7fb1d4700000-7fb1d4718000 r-xp 00000000 08:07 1843                       /lib/x86_64-linux-gnu/libpthread-2.15.so
+7fb1d4718000-7fb1d4917000 ---p 00018000 08:07 1843                       /lib/x86_64-linux-gnu/libpthread-2.15.so
+7fb1d4917000-7fb1d4918000 r--p 00017000 08:07 1843                       /lib/x86_64-linux-gnu/libpthread-2.15.so
+7fb1d4918000-7fb1d4919000 rw-p 00018000 08:07 1843                       /lib/x86_64-linux-gnu/libpthread-2.15.so
+7fb1d4919000-7fb1d491d000 rw-p 00000000 00:00 0 
+7fb1d491d000-7fb1d4ad2000 r-xp 00000000 08:07 164                        /lib/x86_64-linux-gnu/libc-2.15.so
+7fb1d4ad2000-7fb1d4cd2000 ---p 001b5000 08:07 164                        /lib/x86_64-linux-gnu/libc-2.15.so
+7fb1d4cd2000-7fb1d4cd6000 r--p 001b5000 08:07 164                        /lib/x86_64-linux-gnu/libc-2.15.so
+7fb1d4cd6000-7fb1d4cd8000 rw-p 001b9000 08:07 164                        /lib/x86_64-linux-gnu/libc-2.15.so
+7fb1d4cd8000-7fb1d4cdd000 rw-p 00000000 00:00 0 
+7fb1d4cdd000-7fb1d4ce3000 r-xp 00000000 08:07 3027501                    /opt/AMDAPP/lib/x86_64/libOpenCL.so.1
+7fb1d4ce3000-7fb1d4ee2000 ---p 00006000 08:07 3027501                    /opt/AMDAPP/lib/x86_64/libOpenCL.so.1
+7fb1d4ee2000-7fb1d4ee3000 rw-p 00005000 08:07 3027501                    /opt/AMDAPP/lib/x86_64/libOpenCL.so.1
+7fb1d4ee3000-7fb1d4f05000 r-xp 00000000 08:07 1874                       /lib/x86_64-linux-gnu/ld-2.15.so
+7fb1d4f9d000-7fb1d4f9e000 ---p 00000000 00:00 0 
+7fb1d4f9e000-7fb1d50e3000 rw-p 00000000 00:00 0                          [stack:22189]
+7fb1d5101000-7fb1d5105000 rw-p 00000000 00:00 0 
+7fb1d5105000-7fb1d5106000 r--p 00022000 08:07 1874                       /lib/x86_64-linux-gnu/ld-2.15.so
+7fb1d5106000-7fb1d5108000 rw-p 00023000 08:07 1874                       /lib/x86_64-linux-gnu/ld-2.15.so
+7fffea9f1000-7fffeaa13000 rw-p 00000000 00:00 0                          [stack]
+7fffeab3a000-7fffeab3c000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+$ cat /proc/22188/maps | awk '{ print $6 }'
+/home/folder/main
+/home/folder/main
+/home/folder/main
+[heap]
+
+
+
+
+
+
+
+
+
+[stack:22193]
+
+[stack:22192]
+
+[stack:22191]
+
+
+/tmp/OCLyqEL1z.so
+/tmp/OCLyqEL1z.so
+/tmp/OCLyqEL1z.so
+
+[stack:22190]
+/usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+/usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+/usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+/usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+/usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+/usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+/usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+/usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+/usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+/usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+/usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+/usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+/usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+/usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+/usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+/usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+/usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+/usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+/usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+/usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+/lib/x86_64-linux-gnu/libgcc_s.so.1
+/lib/x86_64-linux-gnu/libgcc_s.so.1
+/lib/x86_64-linux-gnu/libgcc_s.so.1
+/lib/x86_64-linux-gnu/libgcc_s.so.1
+/lib/x86_64-linux-gnu/libm-2.15.so
+/lib/x86_64-linux-gnu/libm-2.15.so
+/lib/x86_64-linux-gnu/libm-2.15.so
+/lib/x86_64-linux-gnu/libm-2.15.so
+/lib/x86_64-linux-gnu/librt-2.15.so
+/lib/x86_64-linux-gnu/librt-2.15.so
+/lib/x86_64-linux-gnu/librt-2.15.so
+/lib/x86_64-linux-gnu/librt-2.15.so
+/opt/AMDAPP/lib/x86_64/libamdocl64.so
+/opt/AMDAPP/lib/x86_64/libamdocl64.so
+/opt/AMDAPP/lib/x86_64/libamdocl64.so
+
+/lib/x86_64-linux-gnu/libdl-2.15.so
+/lib/x86_64-linux-gnu/libdl-2.15.so
+/lib/x86_64-linux-gnu/libdl-2.15.so
+/lib/x86_64-linux-gnu/libdl-2.15.so
+/lib/x86_64-linux-gnu/libpthread-2.15.so
+/lib/x86_64-linux-gnu/libpthread-2.15.so
+/lib/x86_64-linux-gnu/libpthread-2.15.so
+/lib/x86_64-linux-gnu/libpthread-2.15.so
+
+/lib/x86_64-linux-gnu/libc-2.15.so
+/lib/x86_64-linux-gnu/libc-2.15.so
+/lib/x86_64-linux-gnu/libc-2.15.so
+/lib/x86_64-linux-gnu/libc-2.15.so
+
+/opt/AMDAPP/lib/x86_64/libOpenCL.so.1
+/opt/AMDAPP/lib/x86_64/libOpenCL.so.1
+/opt/AMDAPP/lib/x86_64/libOpenCL.so.1
+/lib/x86_64-linux-gnu/ld-2.15.so
+
+[stack:22189]
+
+/lib/x86_64-linux-gnu/ld-2.15.so
+/lib/x86_64-linux-gnu/ld-2.15.so
+[stack]
+[vdso]
+[vsyscall]
+
+
+
+$ cat /proc/22188/maps | awk '{ print $6 }' | uniq
+
+/home/folder/main
+[heap]
+
+[stack:22193]
+
+[stack:22192]
+
+[stack:22191]
+
+/tmp/OCLyqEL1z.so
+
+[stack:22190]
+/usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+/usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+/usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+/usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+/usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+/lib/x86_64-linux-gnu/libgcc_s.so.1
+/lib/x86_64-linux-gnu/libm-2.15.so
+/lib/x86_64-linux-gnu/librt-2.15.so
+/opt/AMDAPP/lib/x86_64/libamdocl64.so
+
+/lib/x86_64-linux-gnu/libdl-2.15.so
+/lib/x86_64-linux-gnu/libpthread-2.15.so
+
+/lib/x86_64-linux-gnu/libc-2.15.so
+
+/opt/AMDAPP/lib/x86_64/libOpenCL.so.1
+/lib/x86_64-linux-gnu/ld-2.15.so
+
+[stack:22189]
+
+/lib/x86_64-linux-gnu/ld-2.15.so
+[stack]
+[vdso]
+[vsyscall]
+
+
+# WHATS THIS? - maybe it's generated by OpenCL compiler? 
+# /tmp/OCLyqEL1z.so
+
+
+$ cp /opt/AMDAPP/lib/x86_64/libamdocl64.so ~/ws/capstan-example/
+$ cp /opt/AMDAPP/lib/x86_64/libOpenCL.so ~/ws/capstan-example/
+$ cp /opt/AMDAPP/lib/x86_64/libOpenCL.so.1 ~/ws/capstan-example/
+
