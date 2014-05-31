@@ -1,2 +1,6 @@
+
 *.o
-*.so
+
+# we need to copy some .so files
+#*.so
+main.so
