@@ -26,6 +26,6 @@ build: make
 files:
   /tools/main.so: main.so
   /tools/vector_add_kernel.cl: vector_add_kernel.cl
-  /opt/AMDAPP/lib/x86_64/libamdocl64.so libamdocl64.so
-  /opt/AMDAPP/lib/x86_64/libOpenCL.so libOpenCL.so
-  /opt/AMDAPP/lib/x86_64/libOpenCL.so.1 libOpenCL.so.1
+  /opt/AMDAPP/lib/x86_64/libamdocl64.so: files/libamdocl64.so
+  /opt/AMDAPP/lib/x86_64/libOpenCL.so: files/libOpenCL.so
+  /opt/AMDAPP/lib/x86_64/libOpenCL.so.1: files/libOpenCL.so.1

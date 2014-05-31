@@ -37,7 +37,7 @@ int main(void) {
 
     printf("OpenCL kernel:\n%s\n", source_str);
 
-/*    // Get platform and device information
+    // Get platform and device information
     cl_platform_id platform_id = NULL;
     cl_device_id device_id = NULL;   
     cl_uint ret_num_devices;
@@ -108,7 +108,7 @@ int main(void) {
     ret = clReleaseContext(context);
 
     free(C);
-*/
+
     free(A);
     free(B);
     

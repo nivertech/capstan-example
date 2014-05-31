@@ -1,0 +1,29 @@
+
+$ capstan build
+Building capstan-example...
+
+$ capstan run
+Created instance: capstan-example
+OSv v0.08
+OpenCL kernel:
+__kernel void vector_add(__global int *A, __global int *B, __global int *C) {
+    
+    // Get the index of the current element
+    int i = get_global_id(0);
+
+    // Do the operation
+    C[i] = A[i] + B[i];
+}
+
+Failed looking up symbol clGetPlatformIDs
+
+[backtrace]
+0x32b5d2 <elf::object::resolve_pltgot(unsigned int)+82>
+0x360812 <__elf_resolve_pltgot+46>
+0x3bcc5f <osv::run(std::string, int, char**, int*)+255>
+0x3bd06f <osv::run(std::string, std::vector<std::string, std::allocator<std::string> >, int*)+575>
+0x20d9a5 <run_main(std::vector<std::string, std::allocator<std::string> > const&)+245>
+0x20f54f <do_main_thread(void*)+1023>
+0x4061b5 <sync+69>
+0x3a6fea <thread_main_c+26>
+0x361b65 <thread_main+7>
